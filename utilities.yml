@@ -1,0 +1,560 @@
+# NetKit
+
+utilities:
+  isipv4:
+    base-name:
+    description: validating ipv4
+    related:
+      #-
+    example:
+      in: 66.99.66.99
+      out: True
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  i2n:
+    base-name:
+    description: ip to decimal
+    related:
+      #-
+    example:
+      in: 20777216
+      out: 1.61.9.0
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  n2i:
+    base-name:
+    description: decimal to ip
+    related:
+      #-
+    example:
+      in: 4000000
+      out: 0.61.9.0
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  i2b:
+    base-name:
+    description: ip to binary
+    related:
+      #-
+    example:
+      in: 192.168.100.1
+      out: 11000000.10101000.01100100.00000001
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  i2i:
+    base-name:
+    description: ip range generator from-to
+    related:
+      - i2n
+      - n2i
+    example:
+      in: 192.168.100.1, 192.168.100.3
+      out: "['192.168.100.1', '192.168.100.2', '192.168.100.3']"
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  c2n:
+    base-name:
+    description: cidr to decimal
+    related:
+      #-
+    example:
+      in: 24
+      out: 1099511627520
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  c2i:
+    base-name:
+    description: cidr to ip
+    related:
+      - n2i
+      - c2n
+    example:
+      in: 24
+      out: 255.255.255.0
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  i2c:
+    base-name:
+    description: ip to cidr
+    related:
+      - i2b
+    example:
+      in: 254.255.255.254
+      out: 30
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  r2r:
+    base-name:
+    description: get cidr range "192.168.1.0/24"
+    related:
+      - i2n
+      - c2n
+      - n2i
+    example:
+      in: 192.168.100.1/24
+      out: "['192.168.100.0', '192.168.100.255']"
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  b2i:
+    base-name:
+    description: binary to ip
+    related:
+      #-
+    example:
+      in: 11111111.11111111.11111111.00000000
+      out: 255.255.255.0
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  n2c:
+    base-name:
+    description: ip decimal to cidr
+    related:
+      - n2i
+      - i2c
+    example:
+      in: 4294967040
+      out: 24
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  r2c:
+    base-name:
+    description: range to cidr
+    related:
+      - i2n
+    example:
+      in: 192.168.100.1, 192.168.100.19
+      out: 27
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  c2h:
+    base-name:
+    description: cidr to number of useable hosts
+    related:
+      #-
+    example:
+      in: 18
+      out: 16382
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  h2c:
+    base-name:
+    description: hosts number to cider
+    related:
+      #-
+    example:
+      in: 9999
+      out: 18
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  i2t:
+    base-name:
+    description: detect ipv4 type (private, loopback, etc..)
+    related:
+      #-
+    example:
+      in: 172.16.25.25
+      out: private
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  t2i:
+    base-name:
+    description: type to random ip
+    related:
+      #-
+    example:
+      in: public
+      out: 57.106.27.65
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  i2p:
+    base-name:
+    description: ip to packed binary
+    related:
+      #-
+    example:
+      in: 123.234.255.255
+      out: "{\\xea\\xff\\xff"
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  p2i:
+    base-name:
+    description: packed binary to ip
+    related:
+      #-
+    example:
+      in: "{\\xea\\xff\\xff"
+      out: 123.234.255.255
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  n2m:
+    base-name:
+    description: decimal to mac
+    related:
+      #-
+    example:
+      in: 240:241:242:243:244:245
+      out: f0:f1:f2:f3:f4:f5
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  m2n:
+    base-name:
+    description: mac to decimal
+    related:
+      #-
+    example:
+      in: f0:f1:f2:f3:f4:f5
+      out: 240:241:242:243:244:245
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  m2b:
+    base-name:
+    description: mac to binary
+    related:
+      #-
+    example:
+      in: f0:f1:f2:f3:f4:f5
+      out: 11110000:11110001:11110010:11110011:11110100:11110101
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  b2m:
+    base-name:
+    description: binary to mac
+    related:
+      #-
+    example:
+      in: 11110000:11110001:11110010:11110011:11110100:11110101
+      out: f0:f1:f2:f3:f4:f5
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  v2a:
+    base-name: vendor detector
+    description: vendor first 3 hextets of mac address to vendor address
+    related:
+      #-
+    example:
+      in: 40B7FC
+      out: "{'org': 'Phyplus Microelectronics Limited', 'address': '304 Building 1 No.608 Sheng Xia Road, Shanghai 200000, CN'}"
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
+  p2d:
+    base-name: port scanner
+    description: port to detect
+    related:
+      #-
+    example:
+      in:
+      out:
+    author: virus
+    bugs:
+      #-
+    note:
+    support:
+      - windows 11
+      - windows 10
+      - kali linux
+      - android
+    usage:
+      #-
+    status: 100 # in percentage
+    history:
+      2023-05-29: first release
+    version: 1.0.0
