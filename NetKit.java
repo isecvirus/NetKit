@@ -3,6 +3,9 @@ package org.virus.netkit;
 /**
  *
  * @author virus
+ *
+ *
+ * Still under development
  */
 public class NetKit {
 
