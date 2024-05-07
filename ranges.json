@@ -1,0 +1,239 @@
+{
+  "private": [
+    {
+      "ip": "0.0.0.0",
+      "cidr": 8,
+      "mask": "255.0.0.0",
+      "range": {
+        "from": "0.0.0.0",
+        "to": "0.255.255.255"
+      },
+      "scope": "private",
+      "rfc": [
+        1122
+      ],
+      "description": "RFC 1122, Section 3.2.1.3"
+    },
+    {
+      "ip": "10.0.0.0",
+      "cidr": 8,
+      "mask": "255.0.0.0",
+      "range": {
+        "from": "10.0.0.0",
+        "to": "10.255.255.255"
+      },
+      "scope": "private",
+      "rfc": [
+        1918
+      ],
+      "description": ""
+    },
+    {
+      "ip": "100.64.0.0",
+      "cidr": 10,
+      "mask": "255.192.0.0",
+      "range": {
+        "from": "100.64.0.0",
+        "to": "100.127.255.255"
+      },
+      "scope": "private",
+      "rfc": [
+        6598
+      ],
+      "description": ""
+    },
+    {
+      "ip": "172.16.0.0",
+      "cidr": 12,
+      "mask": "255.240.0.0",
+      "range": {
+        "from": "172.16.0.0",
+        "to": "172.31.255.255"
+      },
+      "scope": "private",
+      "rfc": [
+        1918
+      ],
+      "description": ""
+    },
+    {
+      "ip": "192.18.0.0",
+      "cidr": 15,
+      "mask": "255.254.0.0",
+      "range": {
+        "from": "192.18.0.0",
+        "to": "192.19.255.255"
+      },
+      "scope": "private",
+      "rfc": [
+        2544
+      ],
+      "description": "Network Interconnect Device Benchmark Testing"
+    },
+    {
+      "ip": "192.168.0.0",
+      "cidr": 16,
+      "mask": "255.255.0.0",
+      "range": {
+        "from": "192.168.0.0",
+        "to": "192.168.255.255"
+      },
+      "scope": "private",
+      "rfc": [
+        1918
+      ],
+      "description": ""
+    },
+    {
+      "ip": "192.168.0.0",
+      "cidr": 24,
+      "mask": "255.255.255.0",
+      "range": {
+        "from": "192.0.0.0",
+        "to": "192.0.0.255"
+      },
+      "scope": "private",
+      "rfc": [
+        5736
+      ],
+      "description": "IETF Protocol Assignments"
+    }
+  ],
+  "public": [
+    {
+      "ip": "192.88.99.0",
+      "cidr": 24,
+      "mask": "255.255.255.0",
+      "range": {
+        "from": "192.19.255.255",
+        "to": "192.88.99.255"
+      },
+      "scope": "public",
+      "rfc": [
+        3068
+      ],
+      "description": "6to4 Relay Anycast"
+    },
+    {
+      "ip": "224.0.0.0",
+      "cidr": 4,
+      "mask": "240.0.0.0",
+      "range": {
+        "from": "224.0.0.0",
+        "to": "239.255.255.255"
+      },
+      "scope": "public",
+      "rfc": [
+        3171
+      ],
+      "description": "Multicast"
+    }
+  ],
+  "documentation": [
+    {
+      "ip": "192.0.2.0",
+      "cidr": 24,
+      "mask": "255.255.255.0",
+      "range": {
+        "from": "192.0.2.0",
+        "to": "192.0.2.255"
+      },
+      "scope": "documentation",
+      "rfc": [
+        5737
+      ],
+      "description": "TEST-NET-1"
+    },
+    {
+      "ip": "198.51.100.0",
+      "cidr": 24,
+      "mask": "255.255.255.0",
+      "range": {
+        "from": "198.51.100.0",
+        "to": "198.51.100.255"
+      },
+      "scope": "documentation",
+      "rfc": [
+        5737
+      ],
+      "description": "TEST-NET-2"
+    },
+    {
+      "ip": "203.0.113.0",
+      "cidr": 24,
+      "mask": "255.255.255.0",
+      "range": {
+        "from": "203.0.113.0",
+        "to": "203.0.113.255"
+      },
+      "scope": "documentation",
+      "rfc": [
+        5737
+      ],
+      "description": "TEST-NET-3"
+    }
+  ],
+  "subnet": [
+    {
+      "ip": "169.254.0.0",
+      "cidr": 16,
+      "mask": "255.255.0.0",
+      "range": {
+        "from": "169.254.0.0",
+        "to": "169.254.255.255"
+      },
+      "scope": "subnet",
+      "rfc": [
+        3927
+      ],
+      "description": "Link Local"
+    }
+  ],
+  "host": [
+    {
+      "ip": "127.0.0.0",
+      "cidr": 8,
+      "mask": "255.0.0.0",
+      "range": {
+        "from": "127.0.0.0",
+        "to": "127.255.255.255"
+      },
+      "scope": "host",
+      "rfc": [
+        1122
+      ],
+      "description": "Loopback (RFC 1122, Section 3.2.1.3)"
+    }
+  ],
+  "n/a": [
+    {
+      "ip": "240.0.0.0",
+      "cidr": 44,
+      "mask": "240.0.0.0",
+      "range": {
+        "from": "240.0.0.0",
+        "to": "255.255.255.255"
+      },
+      "scope": "n/a",
+      "rfc": [
+        1122
+      ],
+      "description": "Reserved for Future Use (RFC 1112, Section 4)"
+    },
+    {
+      "ip": "255.255.255.255",
+      "cidr": 32,
+      "mask": "255.255.255.255",
+      "range": {
+        "from": "255.255.255.255",
+        "to": "255.255.255.255"
+      },
+      "scope": "n/a",
+      "rfc": [
+        919,
+        922
+      ],
+      "description": "Limited Broadcast (RFC 919, Section 7, RFC 922, Section 7)"
+    }
+  ]
+}

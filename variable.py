@@ -1,0 +1,19 @@
+# --- IP
+MIN_IP = 0
+MAX_IP = 2 ** 32 # 4294967296
+
+# --- CIDR
+MIN_CIDR = 0
+MAX_CIDR = 32
+
+# --- PORT
+MIN_PORT = 0
+MAX_PORT = 2 ** 16 - 1  # 65535
+
+# --- VLAN
+MIN_VLAN = 0
+MAX_VLAN = 2 ** 12
+
+# --- STATUS CODE
+MIN_STATUS_CODE = 100
+MAX_STATUS_CODE = 599

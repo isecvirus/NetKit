@@ -1,0 +1,1969 @@
+{
+  "http": {
+    "0": {
+      "000": [
+        {
+          "message": "",
+          "category": "unofficial",
+          "description": "Returned with an HTTP/2 GOAWAY frame if the compressed length of any of the headers exceeds 8K bytes or if more than 10K requests are served through one connection.",
+          "vendor": ""
+        }
+      ]
+    },
+    "1": {
+      "100": [
+        {
+          "message": "Continue",
+          "category": "informational",
+          "description": "This interim response indicates that everything so far is OK and that the client should continue with the request or ignore it if it is already finished.",
+          "vendor": ""
+        }
+      ],
+      "101": [
+        {
+          "message": "Switching Protocol",
+          "category": "informational",
+          "description": "This code is sent in response to an Upgrade request header by the client, and indicates the protocol the server is switching to.",
+          "vendor": ""
+        }
+      ],
+      "102": [
+        {
+          "message": "Processing (WebDAV)",
+          "category": "informational",
+          "description": "This code indicates that the server has received and is processing the request, but no response is available yet.",
+          "vendor": "WebDav"
+        }
+      ],
+      "103": [
+        {
+          "message": "Early Hints / Checkpoint",
+          "category": "informational",
+          "description": "Early Hints This code indicates that the server is likely to send a final response with the header fields included in that very informational response. It is intended to minimize the perceived latency taking advantage of the Link header field to speculatively preload or prefetch resources. Checkpoint This code is the same as the 308 status code except for the fact that it is sent a provisional response rather than a final response.In other words, zero or more 103 responses can be sent in response to a request that is still being processed, after which a final response code must be sent.",
+          "vendor": ""
+        }
+      ]
+    },
+    "2": {
+      "200": [
+        {
+          "message": "OK",
+          "category": "successful",
+          "description": "The request has succeeded. The meaning of a success varies depending on the HTTP method: GET: The resource has been fetched and is transmitted in the message body. HEAD: The entity headers are in the message body. PUT or POST: The resource describing the result of the action is transmitted in the message body. TRACE: The message body contains the request message as received by the server",
+          "vendor": ""
+        }
+      ],
+      "201": [
+        {
+          "message": "Created",
+          "category": "successful",
+          "description": "The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
+          "vendor": ""
+        }
+      ],
+      "202": [
+        {
+          "message": "Accepted",
+          "category": "successful",
+          "description": "The request has been received but not yet acted upon. It is non-committal, meaning that there is no way in HTTP to later send an asynchronous response indicating the outcome of processing the request. It is intended for cases where another process or server handles the request, or for batch processing.",
+          "vendor": ""
+        }
+      ],
+      "203": [
+        {
+          "message": "Non-Authoritative Information",
+          "category": "successful",
+          "description": "This response code means returned meta-information set is not exact set as available from the origin server, but collected from a local or a third party copy. Except this condition, 200 OK response should be preferred instead of this response.",
+          "vendor": ""
+        }
+      ],
+      "204": [
+        {
+          "message": "No Content",
+          "category": "successful",
+          "description": "There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones.",
+          "vendor": ""
+        }
+      ],
+      "205": [
+        {
+          "message": "Reset Content",
+          "category": "successful",
+          "description": "This response code is sent after accomplishing request to tell user agent reset document view which sent this request.",
+          "vendor": ""
+        }
+      ],
+      "206": [
+        {
+          "message": "Partial Content",
+          "category": "successful",
+          "description": "This response code is used because of range header sent by the client to separate download into multiple streams.",
+          "vendor": ""
+        }
+      ],
+      "207": [
+        {
+          "message": "Multi-Status (WebDav)",
+          "category": "successful",
+          "description": "A Multi-Status response conveys information about multiple resources in situations where multiple status codes might be appropriate.",
+          "vendor": "WebDav"
+        }
+      ],
+      "208": [
+        {
+          "message": "Multi-Status (WebDav)",
+          "category": "successful",
+          "description": "Used inside a DAV: propstat response element to avoid enumerating the internal members of multiple bindings to the same collection repeatedly.",
+          "vendor": "WebDev"
+        }
+      ],
+      "218": [
+        {
+          "message": "This is fine (Apache HTTP Server)",
+          "category": "unofficial",
+          "description": "Used by Apache servers. A catch-all error condition allowing the passage of message bodies through the server when the \"ProxyErrorOverride\" setting is enabled. It is displayed in this situation instead of a 4xx or 5xx error message.",
+          "vendor": "Apache"
+        }
+      ],
+      "226": [
+        {
+          "message": "IM Used (HTTP Delta encoding)",
+          "category": "successful",
+          "description": "The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.",
+          "vendor": ""
+        }
+      ]
+    },
+    "3": {
+      "300": [
+        {
+          "message": "Multiple Choice",
+          "category": "redirection",
+          "description": "The request has more than one possible response. The user-agent or user should choose one of them. There is no standardized way of choosing one of the responses.",
+          "vendor": ""
+        }
+      ],
+      "301": [
+        {
+          "message": "Moved Permanently",
+          "category": "redirection",
+          "description": "This response code means that the URI of the requested resource has been changed. Probably, the new URI would be given in the response.",
+          "vendor": ""
+        }
+      ],
+      "302": [
+        {
+          "message": "Found",
+          "category": "redirection",
+          "description": "This response code means that the URI of requested resource has been changed temporarily. New changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.",
+          "vendor": ""
+        }
+      ],
+      "303": [
+        {
+          "message": "See Other",
+          "category": "redirection",
+          "description": "The server sent this response to direct the client to get the requested resource at another URI with a GET request.",
+          "vendor": ""
+        }
+      ],
+      "304": [
+        {
+          "message": "Not Modified",
+          "category": "redirection",
+          "description": "This is used for caching purposes. It tells the client that the response has not been modified, so the client can continue to use the same cached version of the response.",
+          "vendor": ""
+        }
+      ],
+      "305": [
+        {
+          "message": "Use Proxy",
+          "category": "redirection",
+          "description": "Was defined in a previous version of the HTTP specification to indicate that a requested response must be accessed by a proxy. It has been deprecated due to security concerns regarding in-band configuration of a proxy.",
+          "vendor": ""
+        }
+      ],
+      "306": [
+        {
+          "message": "Unused",
+          "category": "redirection",
+          "description": "This response code is no longer used, it is just reserved currently. It was used in a previous version of the HTTP 1.1 specification.",
+          "vendor": ""
+        }
+      ],
+      "307": [
+        {
+          "message": "Temporary Redirect",
+          "category": "redirection",
+          "description": "The server sends this response to direct the client to get the requested resource at another URI with same method that was used in the prior request. This has the same semantics as the 302 Found HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request.",
+          "vendor": ""
+        }
+      ],
+      "308": [
+        {
+          "message": "Permanent Redirect",
+          "category": "redirection",
+          "description": "This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: If a POST was used in the first request, a POST must be used in the second request.",
+          "vendor": ""
+        }
+      ]
+    },
+    "4": {
+      "400": [
+        {
+          "message": "Bad Request",
+          "category": "client error",
+          "description": "This response means that server could not understand the request due to invalid syntax.",
+          "vendor": ""
+        }
+      ],
+      "401": [
+        {
+          "message": "Unauthorized",
+          "category": "client error",
+          "description": "Although the HTTP standard specifies 'unauthorized', semantically this response means 'unauthenticated'. That is, the client must authenticate itself to get the requested response.",
+          "vendor": ""
+        }
+      ],
+      "402": [
+        {
+          "message": "Payment Required",
+          "category": "client error",
+          "description": "This response code is reserved for future use. Initial aim for creating this code was using it for digital payment systems however this is not used currently.",
+          "vendor": ""
+        }
+      ],
+      "403": [
+        {
+          "message": "Forbidden",
+          "category": "client error",
+          "description": "The client does not have access rights to the content, i.e. they are unauthorized, so server is rejecting to give proper response. Unlike 401, the client's identity is known to the server.",
+          "vendor": ""
+        }
+      ],
+      "404": [
+        {
+          "message": "Not Found",
+          "category": "client error",
+          "description": "The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web.",
+          "vendor": ""
+        }
+      ],
+      "405": [
+        {
+          "message": "Method Not Allowed",
+          "category": "client error",
+          "description": "The request method is known by the server but has been disabled and cannot be used. For example, an API may forbid DELETE-ing a resource. The two mandatory methods, GET and HEAD, must never be disabled and should not return this error code.",
+          "vendor": ""
+        }
+      ],
+      "406": [
+        {
+          "message": "Not Acceptable",
+          "category": "client error",
+          "description": "This response is sent when the web server, after performing server-driven content negotiation, doesn't find any content following the criteria given by the user agent.",
+          "vendor": ""
+        }
+      ],
+      "407": [
+        {
+          "message": "Proxy Authentication Required",
+          "category": "client error",
+          "description": "This is similar to 401 but authentication is needed to be done by a proxy.",
+          "vendor": ""
+        }
+      ],
+      "408": [
+        {
+          "message": "Request Timeout",
+          "category": "client error",
+          "description": "This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing. Also note that some servers merely shut down the connection without sending this message.",
+          "vendor": ""
+        }
+      ],
+      "409": [
+        {
+          "message": "Conflict",
+          "category": "client error",
+          "description": "This response is sent when a request conflicts with the current state of the server.",
+          "vendor": ""
+        }
+      ],
+      "410": [
+        {
+          "message": "Gone",
+          "category": "client error",
+          "description": "This response would be sent when the requested content has been permanently deleted from server, with no forwarding address. Clients are expected to remove their caches and links to the resource. The HTTP specification intends this status code to be used for 'limited-time, promotional services'. APIs should not feel compelled to indicate resources that have been deleted with this status code.",
+          "vendor": ""
+        }
+      ],
+      "411": [
+        {
+          "message": "Length Required",
+          "category": "client error",
+          "description": "Server rejected the request because the Content-Length header field is not defined and the server requires it.",
+          "vendor": ""
+        }
+      ],
+      "412": [
+        {
+          "message": "Precondition Failed",
+          "category": "client error",
+          "description": "The client has indicated preconditions in its headers which the server does not meet.",
+          "vendor": ""
+        }
+      ],
+      "413": [
+        {
+          "message": "Payload Too Large",
+          "category": "client error",
+          "description": "Request entity is larger than limits defined by server; the server might close the connection or return an Retry-After header field.",
+          "vendor": ""
+        }
+      ],
+      "414": [
+        {
+          "message": "URI Too Long",
+          "category": "client error",
+          "description": "Request entity is larger than limits defined by server; the server might close the connection or return an Retry-After header field.",
+          "vendor": ""
+        }
+      ],
+      "415": [
+        {
+          "message": "Unsupported Media Type",
+          "category": "client error",
+          "description": "The media format of the requested data is not supported by the server, so the server is rejecting the request.",
+          "vendor": ""
+        }
+      ],
+      "416": [
+        {
+          "message": "Requested Range Not Satisfiable",
+          "category": "client error",
+          "description": "The range specified by the Range header field in the request can't be fulfilled; it's possible that the range is outside the size of the target URI's data.",
+          "vendor": ""
+        }
+      ],
+      "417": [
+        {
+          "message": "Expectation Failed",
+          "category": "client error",
+          "description": "This response code means the expectation indicated by the Expect request header field can't be met by the server.",
+          "vendor": ""
+        }
+      ],
+      "418": [
+        {
+          "message": "I'm a teapot",
+          "category": "client error",
+          "description": "The server refuses the attempt to brew coffee with a teapot.",
+          "vendor": ""
+        }
+      ],
+      "419": [
+        {
+          "message": "Page Expired",
+          "category": "unofficial",
+          "description": "Used by the Laravel Framework when a CSRF Token is missing or expired.",
+          "vendor": "Laravel Framework"
+        }
+      ],
+      "420": [
+        {
+          "message": "Method Failure",
+          "category": "unofficial",
+          "description": "A deprecated response status proposed during the development of WebDAV used by the Spring Framework when a method has failed.",
+          "vendor": "Spring Framework"
+        },
+        {
+          "message": "Enhance Your Calm",
+          "category": "unofficial",
+          "description": "Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead. The phrase \"Enhance your calm\" comes from the 1993 movie Demolition Man, and its association with this number is likely a reference to cannabis.",
+          "vendor": "Twitter"
+        }
+      ],
+      "421": [
+        {
+          "message": "Misdirected Request",
+          "category": "client error",
+          "description": "The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.",
+          "vendor": ""
+        }
+      ],
+      "422": [
+        {
+          "message": "Unprocessable Entity (WebDAV)",
+          "category": "client error",
+          "description": "The request was well-formed but was unable to be followed due to semantic errors.",
+          "vendor": "WebDev"
+        }
+      ],
+      "423": [
+        {
+          "message": "Locked (WebDAV)",
+          "category": "client error",
+          "description": "The resource that is being accessed is locked.",
+          "vendor": "WebDev"
+        }
+      ],
+      "424": [
+        {
+          "message": "Failed Dependency (WebDAV)",
+          "category": "client error",
+          "description": "The request failed due to failure of a previous request.",
+          "vendor": "WebDev"
+        }
+      ],
+      "426": [
+        {
+          "message": "Upgrade Required",
+          "category": "client error",
+          "description": "The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol. The server sends an Upgrade header in a 426 response to indicate the required protocol(s).",
+          "vendor": ""
+        }
+      ],
+      "428": [
+        {
+          "message": "Precondition Required",
+          "category": "client error",
+          "description": "The origin server requires the request to be conditional. Intended to prevent the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict.",
+          "vendor": ""
+        }
+      ],
+      "429": [
+        {
+          "message": "Too Many Requests",
+          "category": "client error",
+          "description": "The user has sent too many requests in a given amount of time ('rate limiting').",
+          "vendor": ""
+        }
+      ],
+      "430": [
+        {
+          "message": "Request Header Fields Too Large",
+          "category": "unofficial",
+          "description": "A deprecated response used by Shopify, instead of the 429 Too Many Requests response code, when too many URLs are requested within a certain time frame.",
+          "vendor": "Shopify"
+        },
+        {
+          "message": "Shopify Security Rejection",
+          "category": "unofficial",
+          "description": "Used by Shopify to signal that the request was deemed malicious.",
+          "vendor": "Shopify"
+        }
+      ],
+      "431": [
+        {
+          "message": "Request Header Fields Too Large",
+          "category": "client error",
+          "description": "The server is unwilling to process the request because its header fields are too large. The request MAY be resubmitted after reducing the size of the request header fields.",
+          "vendor": ""
+        }
+      ],
+      "440": [
+        {
+          "message": "Login Time-out",
+          "category": "unofficial",
+          "description": "The client's session has expired and must log in again.",
+          "vendor": ""
+        }
+      ],
+      "444": [
+        {
+          "message": "No Response",
+          "category": "unofficial",
+          "description": "Used internally to instruct the server to return no information to the client and close the connection immediately.",
+          "vendor": ""
+        }
+      ],
+      "449": [
+        {
+          "message": "Retry With",
+          "category": "unofficial",
+          "description": "The server cannot honour the request because the user has not provided the required information.",
+          "vendor": ""
+        }
+      ],
+      "450": [
+        {
+          "message": "Blocked by Windows Parental Controls",
+          "category": "unofficial",
+          "description": "The Microsoft extension code indicated when Windows Parental Controls are turned on and are blocking access to the requested webpage.",
+          "vendor": "Microsoft"
+        }
+      ],
+      "451": [
+        {
+          "message": "Unavailable For Legal Reasons",
+          "category": "client error",
+          "description": "The user requests an illegal resource, such as a web page censored by a government.",
+          "vendor": ""
+        }
+      ],
+      "460": [
+        {
+          "message": "",
+          "category": "unofficial",
+          "description": "Client closed the connection with the load balancer before the idle timeout period elapsed. Typically, when client timeout is sooner than the Elastic Load Balancer's timeout.",
+          "vendor": ""
+        }
+      ],
+      "463": [
+        {
+          "message": "",
+          "category": "unofficial",
+          "description": "The load balancer received an X-Forwarded-For request header with more than 30 IP addresses.",
+          "vendor": ""
+        }
+      ],
+      "464": [
+        {
+          "message": "",
+          "category": "unofficial",
+          "description": "Incompatible protocol versions between Client and Origin server.",
+          "vendor": ""
+        }
+      ],
+      "494": [
+        {
+          "message": "Request header too large",
+          "category": "unofficial",
+          "description": "Client sent too large request or too long header line.",
+          "vendor": ""
+        }
+      ],
+      "495": [
+        {
+          "message": "SSL Certificate Error",
+          "category": "unofficial",
+          "description": "An expansion of the 400 Bad Request response code, used when the client has provided an invalid client certificate.",
+          "vendor": ""
+        }
+      ],
+      "496": [
+        {
+          "message": "SSL Certificate Required",
+          "category": "unofficial",
+          "description": "An expansion of the 400 Bad Request response code, used when a client certificate is required but not provided.",
+          "vendor": ""
+        }
+      ],
+      "497": [
+        {
+          "message": "HTTP Request Sent to HTTPS Port",
+          "category": "unofficial",
+          "description": "An expansion of the 400 Bad Request response code, used when the client has made a HTTP request to a port listening for HTTPS requests.",
+          "vendor": ""
+        }
+      ],
+      "498": [
+        {
+          "message": "Invalid Token",
+          "category": "unofficial",
+          "description": "Returned by ArcGIS for Server. Code 498 indicates an expired or otherwise invalid token.",
+          "vendor": "Esri"
+        }
+      ],
+      "499": [
+        {
+          "message": "Token Required",
+          "category": "unofficial",
+          "description": "Returned by ArcGIS for Server. Code 499 indicates that a token is required but was not submitted.",
+          "vendor": "Esri"
+        }
+      ]
+    },
+    "5": {
+      "500": [
+        {
+          "message": "Internal Server Error",
+          "category": "server error",
+          "description": "The server has encountered a situation it doesn't know how to handle.",
+          "vendor": ""
+        }
+      ],
+      "501": [
+        {
+          "message": "Not Implemented",
+          "category": "server error",
+          "description": "The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are GET and HEAD.",
+          "vendor": ""
+        }
+      ],
+      "502": [
+        {
+          "message": "Bad Gateway",
+          "category": "server error",
+          "description": "This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.",
+          "vendor": ""
+        }
+      ],
+      "503": [
+        {
+          "message": "Service Unavailable",
+          "category": "server error",
+          "description": "The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This responses should be used for temporary conditions and the Retry-After: HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached.",
+          "vendor": ""
+        }
+      ],
+      "504": [
+        {
+          "message": "Gateway Timeout",
+          "category": "server error",
+          "description": "This error response is given when the server is acting as a gateway and cannot get a response in time.",
+          "vendor": ""
+        }
+      ],
+      "505": [
+        {
+          "message": "HTTP Version Not Supported",
+          "category": "server error",
+          "description": "The HTTP version used in the request is not supported by the server.",
+          "vendor": ""
+        }
+      ],
+      "506": [
+        {
+          "message": "Variant Also Negotiates",
+          "category": "server error",
+          "description": "The server has an internal configuration error: transparent content negotiation for the request results in a circular reference.",
+          "vendor": ""
+        }
+      ],
+      "507": [
+        {
+          "message": "Insufficient Storage",
+          "category": "server error",
+          "description": "The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.",
+          "vendor": ""
+        }
+      ],
+      "508": [
+        {
+          "message": "Loop Detected (WebDAV)",
+          "category": "server error",
+          "description": "The server detected an infinite loop while processing the request.",
+          "vendor": "WebDev"
+        }
+      ],
+      "509": [
+        {
+          "message": "Bandwidth Limit Exceeded (Apache Web Server/cPanel)",
+          "category": "unofficial",
+          "description": "The server has exceeded the bandwidth specified by the server administrator; this is often used by shared hosting providers to limit the bandwidth of customers.",
+          "vendor": "Apache"
+        }
+      ],
+      "510": [
+        {
+          "message": "Not Extended",
+          "category": "server error",
+          "description": "Further extensions to the request are required for the server to fulfill it.",
+          "vendor": ""
+        }
+      ],
+      "511": [
+        {
+          "message": "Network Authentication Required",
+          "category": "server error",
+          "description": "The 511 status code indicates that the client needs to authenticate to gain network access.",
+          "vendor": ""
+        }
+      ],
+      "520": [
+        {
+          "message": "Web Server Returned an Unknown Error",
+          "category": "unofficial",
+          "description": "The origin server returned an empty, unknown, or unexpected response to Cloudflare.",
+          "vendor": ""
+        }
+      ],
+      "521": [
+        {
+          "message": "Web Server Is Down",
+          "category": "unofficial",
+          "description": "The origin server refused connections from Cloudflare. Security solutions at the origin may be blocking legitimate connections from certain Cloudflare IP addresses.",
+          "vendor": ""
+        }
+      ],
+      "522": [
+        {
+          "message": "Connection Timed Out",
+          "category": "unofficial",
+          "description": "Cloudflare timed out contacting the origin server.",
+          "vendor": ""
+        }
+      ],
+      "523": [
+        {
+          "message": "Origin Is Unreachable",
+          "category": "unofficial",
+          "description": "Cloudflare could not reach the origin server; for example, if the DNS records for the origin server are incorrect or missing.",
+          "vendor": ""
+        }
+      ],
+      "524": [
+        {
+          "message": "A Timeout Occurred",
+          "category": "unofficial",
+          "description": "Cloudflare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.",
+          "vendor": ""
+        }
+      ],
+      "525": [
+        {
+          "message": "SSL Handshake Failed",
+          "category": "unofficial",
+          "description": "Cloudflare could not negotiate a SSL/TLS handshake with the origin server.",
+          "vendor": ""
+        }
+      ],
+      "526": [
+        {
+          "message": "Invalid SSL Certificate",
+          "category": "unofficial",
+          "description": "Cloudflare could not validate the SSL certificate on the origin web server. Also used by Cloud Foundry's gorouter.",
+          "vendor": ""
+        }
+      ],
+      "527": [
+        {
+          "message": "Railgun Error",
+          "category": "unofficial",
+          "description": "Error 527 indicates an interrupted connection between Cloudflare and the origin server's Railgun server.",
+          "vendor": ""
+        }
+      ],
+      "529": [
+        {
+          "message": "Site is overloaded",
+          "category": "unofficial",
+          "description": "Used by Qualys in the SSLLabs server testing API to signal that the site can not process the request.",
+          "vendor": "Qualys"
+        }
+      ],
+      "530": [
+        {
+          "message": "Site is frozen",
+          "category": "unofficial",
+          "description": "Used by the Pantheon Systems web platform to indicate a site that has been frozen due to inactivity.",
+          "vendor": "Pantheon"
+        },
+        {
+          "message": "Origin DNS Error (Shopify)",
+          "category": "unofficial",
+          "description": "Used by Shopify to indicate that Cloudflare can't resolve the requested DNS record.",
+          "vendor": "Shopify"
+        },
+        {
+          "message": "",
+          "category": "unofficial",
+          "description": "Error 530 is returned along with a 1xxx error.",
+          "vendor": "Cloudflare"
+        }
+      ],
+      "540": [
+        {
+          "message": "Temporarily Disabled (Shopify)",
+          "category": "unofficial",
+          "description": "Used by Shopify to indicate that the requested endpoint has been temporarily disabled.",
+          "vendor": "Shopify"
+        }
+      ],
+      "561": [
+        {
+          "message": "Unauthorized",
+          "category": "unofficial",
+          "description": "An error around authentication returned by a server registered with a load balancer. A listener rule is configured to authenticate users, but the identity provider (IdP) returned an error code when authenticating the user.",
+          "vendor": ""
+        }
+      ],
+      "598": [
+        {
+          "message": "(Informal convention) Network read timeout error",
+          "category": "unofficial",
+          "description": "Used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy.",
+          "vendor": ""
+        }
+      ],
+      "599": [
+        {
+          "message": "Network Connect Timeout Error",
+          "category": "unofficial",
+          "description": "An error used by some HTTP proxies to signal a network connect timeout behind the proxy to a client in front of the proxy.",
+          "vendor": ""
+        }
+      ]
+    },
+    "7": {
+      "783": [
+        {
+          "message": "Unexpected Token (Shopify)",
+          "category": "unofficial",
+          "description": "Used by Shopify to indicate that the request includes a JSON syntax error.",
+          "vendor": "Shopify"
+        }
+      ]
+    }
+  },
+  "caching_warning": {
+    "1": {
+      "110": [
+        {
+          "message": "Response is Stale",
+          "category": "unofficial",
+          "description": "The response provided by a cache is stale (the content's age exceeds a maximum age set by a Cache-Control header or heuristically chosen lifetime).",
+          "vendor": ""
+        }
+      ],
+      "111": [
+        {
+          "message": "Revalidation Failed",
+          "category": "unofficial",
+          "description": "The cache was unable to validate the response, due to an inability to reach the origin server.",
+          "vendor": ""
+        }
+      ],
+      "112": [
+        {
+          "message": "Disconnected Operation",
+          "category": "unofficial",
+          "description": "The cache is intentionally disconnected from the rest of the network.",
+          "vendor": ""
+        }
+      ],
+      "113": [
+        {
+          "message": "Heuristic Expiration",
+          "category": "unofficial",
+          "description": "The cache heuristically chose a freshness lifetime greater than 24 hours and the response's age is greater than 24 hours.",
+          "vendor": ""
+        }
+      ],
+      "199": [
+        {
+          "message": "Miscellaneous Warning",
+          "category": "unofficial",
+          "description": "Arbitrary, non-specific warning. The warning text may be logged or presented to the user.",
+          "vendor": ""
+        }
+      ]
+    },
+    "2": {
+      "214": [
+        {
+          "message": "Transformation Applied",
+          "category": "unofficial",
+          "description": "Added by a proxy if it applies any transformation to the representation, such as changing the content encoding, media type or the like.",
+          "vendor": ""
+        }
+      ],
+      "299": [
+        {
+          "message": "Miscellaneous Persistent Warning",
+          "category": "unofficial",
+          "description": "Same as 199, but indicating a persistent warning.",
+          "vendor": ""
+        }
+      ]
+    }
+  },
+  "ftp": {
+    "1": {
+      "110": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Restart marker replay . In this case, the text is exact and not left to the particular implementation; it must read: MARK yyyy = mmmm where yyyy is User-process data stream marker, and mmmm server's equivalent marker (note the spaces between markers and \"=\").",
+          "vendor": ""
+        }
+      ],
+      "120": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Service ready in nnn minutes.",
+          "vendor": ""
+        }
+      ],
+      "125": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Data connection already open; transfer starting.",
+          "vendor": ""
+        }
+      ],
+      "150": [
+        {
+          "message": "",
+          "category": "",
+          "description": "File status okay; about to open data connection.",
+          "vendor": ""
+        }
+      ]
+    },
+    "2": {
+      "202": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Command not implemented, superfluous at this site.",
+          "vendor": ""
+        }
+      ],
+      "211": [
+        {
+          "message": "",
+          "category": "",
+          "description": "\tSystem status, or system help reply.",
+          "vendor": ""
+        }
+      ],
+      "212": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Directory status.",
+          "vendor": ""
+        }
+      ],
+      "213": [
+        {
+          "message": "",
+          "category": "",
+          "description": "File status.",
+          "vendor": ""
+        }
+      ],
+      "214": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Help message. Explains how to use the server or the meaning of a particular non-standard command. This reply is useful only to the human user.",
+          "vendor": ""
+        }
+      ],
+      "215": [
+        {
+          "message": "",
+          "category": "",
+          "description": "NAME system type. Where NAME is an official system name from the registry kept by IANA.",
+          "vendor": ""
+        }
+      ],
+      "220": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Service ready for new user.",
+          "vendor": ""
+        }
+      ],
+      "221": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Service closing control connection. Logged out if appropriate.",
+          "vendor": ""
+        }
+      ],
+      "225": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Data connection open; no transfer in progress.",
+          "vendor": ""
+        }
+      ],
+      "226": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Closing data connection. Requested file action successful (for example, file transfer or file abort).",
+          "vendor": ""
+        }
+      ],
+      "227": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Entering Passive Mode (h1,h2,h3,h4,p1,p2).",
+          "vendor": ""
+        }
+      ],
+      "228": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Entering Long Passive Mode (long address, port).",
+          "vendor": ""
+        }
+      ],
+      "229": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Entering Extended Passive Mode (|||port|).",
+          "vendor": ""
+        }
+      ],
+      "230": [
+        {
+          "message": "",
+          "category": "",
+          "description": "User logged in, proceed.",
+          "vendor": ""
+        }
+      ],
+      "232": [
+        {
+          "message": "",
+          "category": "",
+          "description": "User logged in, authorized by security data exchange.",
+          "vendor": ""
+        }
+      ],
+      "234": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Server accepts the security mechanism specified by the client; no security data needs to be exchanged.",
+          "vendor": ""
+        }
+      ],
+      "235": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Server accepts the security data given by the client; no further security data needs to be exchanged.",
+          "vendor": ""
+        }
+      ],
+      "250": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested file action okay, completed.",
+          "vendor": ""
+        }
+      ],
+      "257": [
+        {
+          "message": "",
+          "category": "",
+          "description": "\"PATHNAME\" created.",
+          "vendor": ""
+        }
+      ]
+    },
+    "3": {
+      "331": [
+        {
+          "message": "",
+          "category": "",
+          "description": "User name okay, need password.",
+          "vendor": ""
+        }
+      ],
+      "332": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Need account for login.",
+          "vendor": ""
+        }
+      ],
+      "334": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Server accepts the security mechanism specified by the client; some security data needs to be exchanged.",
+          "vendor": ""
+        }
+      ],
+      "335": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Server accepts the security data given by the client; more security data needs to be exchanged.",
+          "vendor": ""
+        }
+      ],
+      "336": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Username okay, need password. Challenge is \"....\".",
+          "vendor": ""
+        }
+      ],
+      "350": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested file action pending further information.",
+          "vendor": ""
+        }
+      ]
+    },
+    "4": {
+      "421": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Service not available, closing control connection. This may be a reply to any command if the service knows it must shut down.",
+          "vendor": ""
+        }
+      ],
+      "425": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Can't open data connection.",
+          "vendor": ""
+        }
+      ],
+      "426": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Connection closed; transfer aborted.",
+          "vendor": ""
+        }
+      ],
+      "430": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Invalid username or password",
+          "vendor": ""
+        }
+      ],
+      "431": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Need some unavailable resource to process security.",
+          "vendor": ""
+        }
+      ],
+      "434": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested host unavailable.",
+          "vendor": ""
+        }
+      ],
+      "450": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested file action not taken.",
+          "vendor": ""
+        }
+      ],
+      "451": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested action aborted. Local error in processing.",
+          "vendor": ""
+        }
+      ],
+      "452": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested action not taken. Insufficient storage space in system. File unavailable (e.g., file busy).",
+          "vendor": ""
+        }
+      ]
+    },
+    "5": {
+      "501": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Syntax error in parameters or arguments.",
+          "vendor": ""
+        }
+      ],
+      "502": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Command not implemented.",
+          "vendor": ""
+        }
+      ],
+      "503": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Bad sequence of commands.",
+          "vendor": ""
+        }
+      ],
+      "504": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Command not implemented for that parameter.",
+          "vendor": ""
+        }
+      ],
+      "530": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Not logged in.",
+          "vendor": ""
+        }
+      ],
+      "532": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Need account for storing files.",
+          "vendor": ""
+        }
+      ],
+      "533": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Command protection level denied for policy reasons.",
+          "vendor": ""
+        }
+      ],
+      "534": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Request denied for policy reasons.",
+          "vendor": ""
+        }
+      ],
+      "535": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Failed security check.",
+          "vendor": ""
+        }
+      ],
+      "536": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Data protection level not supported by security mechanism.",
+          "vendor": ""
+        }
+      ],
+      "537": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Command protection level not supported by security mechanism.",
+          "vendor": ""
+        }
+      ],
+      "550": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested action not taken. File unavailable (e.g., file not found, no access).",
+          "vendor": ""
+        }
+      ],
+      "551": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested action aborted. Page type unknown.",
+          "vendor": ""
+        }
+      ],
+      "552": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested file action aborted. Exceeded storage allocation (for current directory or dataset).",
+          "vendor": ""
+        }
+      ],
+      "553": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Requested action not taken. File name not allowed.",
+          "vendor": ""
+        }
+      ]
+    },
+    "6": {
+      "631": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Integrity protected reply.",
+          "vendor": ""
+        }
+      ],
+      "632": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Confidentiality and integrity protected reply.",
+          "vendor": ""
+        }
+      ],
+      "633": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Confidentiality protected reply.",
+          "vendor": ""
+        }
+      ]
+    },
+    "100": {
+      "10054": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Connection reset by peer. The connection was forcibly closed by the remote host.",
+          "vendor": ""
+        }
+      ],
+      "10060": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Cannot connect to remote server.",
+          "vendor": ""
+        }
+      ],
+      "10061": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Cannot connect to remote server. The connection is actively refused by the server.",
+          "vendor": ""
+        }
+      ],
+      "10065": [
+        {
+          "message": "",
+          "category": "",
+          "description": "No route to host / DNS cannot be resolved.",
+          "vendor": ""
+        }
+      ],
+      "10066": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Directory not empty.",
+          "vendor": ""
+        }
+      ],
+      "10068": [
+        {
+          "message": "",
+          "category": "",
+          "description": "Too many users, server is full.",
+          "vendor": ""
+        }
+      ]
+    }
+  },
+  "smtp": {},
+  "windows_socket": {
+    "6": {
+      "6": [
+        {
+          "message": "WSA_INVALID_HANDLE",
+          "description": "Specified event object handle is invalid. An application attempts to use an event object, but the specified handle is not valid."
+        }
+      ]
+    },
+    "8": {
+      "8": [
+        {
+          "message": "WSA_NOT_ENOUGH_MEMORY",
+          "description": "Insufficient memory available. An application used a Windows Sockets function that directly maps to a Windows function. The Windows function is indicating a lack of required memory resources."
+        }
+      ],
+      "87": [
+        {
+          "message": "WSA_INVALID_PARAMETER",
+          "description": "One or more parameters are invalid. An application used a Windows Sockets function which directly maps to a Windows function. The Windows function is indicating a problem with one or more parameters."
+        }
+      ]
+    },
+    "99": {
+      "995": [
+        {
+          "message": "WSA_OPERATION_ABORTED",
+          "description": "Overlapped operation aborted. An overlapped operation was canceled due to the closure of the socket, or the execution of the SIO_FLUSH command in WSAIoctl."
+        }
+      ],
+      "996": [
+        {
+          "message": "WSA_IO_INCOMPLETE",
+          "description": "Overlapped I/O event object not in signaled state. The application has tried to determine the status of an overlapped operation which is not yet completed. Applications that use WSAGetOverlappedResult (with the fWait flag set to FALSE) in a polling mode to determine when an overlapped operation has completed, get this error code until the operation is complete."
+        }
+      ],
+      "997": [
+        {
+          "message": "WSA_IO_PENDING",
+          "description": "Overlapped operations will complete later. The application has initiated an overlapped operation that cannot be completed immediately. A completion indication will be given later when the operation has been completed."
+        }
+      ]
+    },
+    "100": {
+      "10004": [
+        {
+          "message": "WSAEINTR",
+          "description": "Interrupted function call. A blocking operation was interrupted by a call to WSACancelBlockingCall."
+        }
+      ],
+      "10009": [
+        {
+          "message": "WSAEBADF",
+          "description": "File handle is not valid. The file handle supplied is not valid."
+        }
+      ],
+      "10013": [
+        {
+          "message": "WSAEACCES",
+          "description": "Permission denied. An attempt was made to access a socket in a way forbidden by its access permissions. An example is using a broadcast address for sendto without broadcast permission being set using setsockopt(SO_BROADCAST). Another possible reason for the WSAEACCES error is that when the bind function is called (on Windows NT 4.0 with SP4 and later), another application, service, or kernel mode driver is bound to the same address with exclusive access. Such exclusive access is a new feature of Windows NT 4.0 with SP4 and later, and is implemented by using the SO_EXCLUSIVEADDRUSE option."
+        }
+      ],
+      "10014": [
+        {
+          "message": "WSAEFAULT",
+          "description": "Bad address. The system detected an invalid pointer address in attempting to use a pointer argument of a call. This error occurs if an application passes an invalid pointer value, or if the length of the buffer is too small. For instance, if the length of an argument, which is a sockaddr structure, is smaller than the sizeof(sockaddr)."
+        }
+      ],
+      "10022": [
+        {
+          "message": "WSAEINVAL",
+          "description": "Invalid argument. Some invalid argument was supplied (for example, specifying an invalid level to the setsockopt function). In some instances, it also refers to the current state of the socket—for instance, calling accept on a socket that is not listening."
+        }
+      ],
+      "10024": [
+        {
+          "message": "WSAEMFILE",
+          "description": "Too many open files. Too many open sockets. Each implementation may have a maximum number of socket handles available, either globally, per process, or per thread."
+        }
+      ],
+      "10035": [
+        {
+          "message": "WSAEWOULDBLOCK",
+          "description": "Resource temporarily unavailable. This error is returned from operations on nonblocking sockets that cannot be completed immediately, for example recv when no data is queued to be read from the socket. It is a nonfatal error, and the operation should be retried later. It is normal for WSAEWOULDBLOCK to be reported as the result from calling connect on a nonblocking SOCK_STREAM socket, since some time must elapse for the connection to be established."
+        }
+      ],
+      "10036": [
+        {
+          "message": "WSAEINPROGRESS",
+          "description": "Operation now in progress. A blocking operation is currently executing. Windows Sockets only allows a single blocking operation—per- task or thread—to be outstanding, and if any other function call is made (whether or not it references that or any other socket) the function fails with the WSAEINPROGRESS error."
+        }
+      ],
+      "10037": [
+        {
+          "message": "WSAEALREADY",
+          "description": "Operation already in progress. An operation was attempted on a nonblocking socket with an operation already in progress—that is, calling connect a second time on a nonblocking socket that is already connecting, or canceling an asynchronous request (WSAAsyncGetXbyY) that has already been canceled or completed."
+        }
+      ],
+      "10038": [
+        {
+          "message": "WSAENOTSOCK",
+          "description": "Socket operation on nonsocket. An operation was attempted on something that is not a socket. Either the socket handle parameter did not reference a valid socket, or for select, a member of an fd_set was not valid."
+        }
+      ],
+      "10039": [
+        {
+          "message": "WSAEDESTADDRREQ",
+          "description": "Destination address required. A required address was omitted from an operation on a socket. For example, this error is returned if sendto is called with the remote address of ADDR_ANY."
+        }
+      ],
+      "10040": [
+        {
+          "message": "WSAEMSGSIZE",
+          "description": "Message too long. A message sent on a datagram socket was larger than the internal message buffer or some other network limit, or the buffer used to receive a datagram was smaller than the datagram itself."
+        }
+      ],
+      "10041": [
+        {
+          "message": "WSAEPROTOTYPE",
+          "description": "Protocol wrong type for socket. A protocol was specified in the socket function call that does not support the semantics of the socket type requested. For example, the ARPA Internet UDP protocol cannot be specified with a socket type of SOCK_STREAM."
+        }
+      ],
+      "10042": [
+        {
+          "message": "WSAENOPROTOOPT",
+          "description": "Bad protocol option. An unknown, invalid or unsupported option or level was specified in a getsockopt or setsockopt call."
+        }
+      ],
+      "10043": [
+        {
+          "message": "WSAEPROTONOSUPPORT",
+          "description": "Protocol not supported. The requested protocol has not been configured into the system, or no implementation for it exists. For example, a socket call requests a SOCK_DGRAM socket, but specifies a stream protocol."
+        }
+      ],
+      "10044": [
+        {
+          "message": "WSAESOCKTNOSUPPORT",
+          "description": "Socket type not supported. The support for the specified socket type does not exist in this address family. For example, the optional type SOCK_RAW might be selected in a socket call, and the implementation does not support SOCK_RAW sockets at all."
+        }
+      ],
+      "10045": [
+        {
+          "message": "WSAEOPNOTSUPP",
+          "description": "Operation not supported. The attempted operation is not supported for the type of object referenced. Usually this occurs when a socket descriptor to a socket that cannot support this operation is trying to accept a connection on a datagram socket."
+        }
+      ],
+      "10046": [
+        {
+          "message": "WSAEPFNOSUPPORT",
+          "description": "Protocol family not supported. The protocol family has not been configured into the system or no implementation for it exists. This message has a slightly different meaning from WSAEAFNOSUPPORT. However, it is interchangeable in most cases, and all Windows Sockets functions that return one of these messages also specify WSAEAFNOSUPPORT."
+        }
+      ],
+      "10047": [
+        {
+          "message": "WSAEAFNOSUPPORT",
+          "description": "Address family not supported by protocol family. An address incompatible with the requested protocol was used. All sockets are created with an associated address family (that is, AF_INET for Internet Protocols) and a generic protocol type (that is, SOCK_STREAM). This error is returned if an incorrect protocol is explicitly requested in the socket call, or if an address of the wrong family is used for a socket, for example, in sendto."
+        }
+      ],
+      "10048": [
+        {
+          "message": "WSAEADDRINUSE",
+          "description": "Address already in use. Typically, only one usage of each socket address (protocol/IP address/port) is permitted. This error occurs if an application attempts to bind a socket to an IP address/port that has already been used for an existing socket, or a socket that was not closed properly, or one that is still in the process of closing. For server applications that need to bind multiple sockets to the same port number, consider using setsockopt (SO_REUSEADDR). Client applications usually need not call bind at all—connect chooses an unused port automatically. When bind is called with a wildcard address (involving ADDR_ANY), a WSAEADDRINUSE error could be delayed until the specific address is committed. This could happen with a call to another function later, including connect, listen, WSAConnect, or WSAJoinLeaf."
+        }
+      ],
+      "10049": [
+        {
+          "message": "WSAEADDRNOTAVAIL",
+          "description": "Cannot assign requested address. The requested address is not valid in its context. This normally results from an attempt to bind to an address that is not valid for the local computer. This can also result from connect, sendto, WSAConnect, WSAJoinLeaf, or WSASendTo when the remote address or port is not valid for a remote computer (for example, address or port 0)."
+        }
+      ],
+      "10050": [
+        {
+          "message": "WSAENETDOWN",
+          "description": "Network is down. A socket operation encountered a dead network. This could indicate a serious failure of the network system (that is, the protocol stack that the Windows Sockets DLL runs over), the network interface, or the local network itself."
+        }
+      ],
+      "10051": [
+        {
+          "message": "WSAENETUNREACH",
+          "description": "Network is unreachable. A socket operation was attempted to an unreachable network. This usually means the local software knows no route to reach the remote host."
+        }
+      ],
+      "10052": [
+        {
+          "message": "WSAENETRESET",
+          "description": "Network dropped connection on reset. The connection has been broken due to keep-alive activity detecting a failure while the operation was in progress. It can also be returned by setsockopt if an attempt is made to set SO_KEEPALIVE on a connection that has already failed."
+        }
+      ],
+      "10053": [
+        {
+          "message": "WSAECONNABORTED",
+          "description": "Software caused connection abort. An established connection was aborted by the software in your host computer, possibly due to a data transmission time-out or protocol error."
+        }
+      ],
+      "10054": [
+        {
+          "message": "WSAECONNRESET",
+          "description": "Connection reset by peer. An existing connection was forcibly closed by the remote host. This normally results if the peer application on the remote host is suddenly stopped, the host is rebooted, the host or remote network interface is disabled, or the remote host uses a hard close (see setsockopt for more information on the SO_LINGER option on the remote socket). This error may also result if a connection was broken due to keep-alive activity detecting a failure while one or more operations are in progress. Operations that were in progress fail with WSAENETRESET. Subsequent operations fail with WSAECONNRESET."
+        }
+      ],
+      "10055": [
+        {
+          "message": "WSAENOBUFS",
+          "description": "No buffer space available. An operation on a socket could not be performed because the system lacked sufficient buffer space or because a queue was full."
+        }
+      ],
+      "10056": [
+        {
+          "message": "WSAEISCONN",
+          "description": "Socket is already connected. A connect request was made on an already-connected socket. Some implementations also return this error if sendto is called on a connected SOCK_DGRAM socket (for SOCK_STREAM sockets, the to parameter in sendto is ignored) although other implementations treat this as a legal occurrence."
+        }
+      ],
+      "10057": [
+        {
+          "message": "WSAENOTCONN",
+          "description": "Socket is not connected. A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using sendto) no address was supplied. Any other type of operation might also return this error—for example, setsockopt setting SO_KEEPALIVE if the connection has been reset."
+        }
+      ],
+      "10058": [
+        {
+          "message": "WSAESHUTDOWN",
+          "description": "Cannot send after socket shutdown. A request to send or receive data was disallowed because the socket had already been shut down in that direction with a previous shutdown call. By calling shutdown a partial close of a socket is requested, which is a signal that sending or receiving, or both have been discontinued."
+        }
+      ],
+      "10059": [
+        {
+          "message": "WSAETOOMANYREFS",
+          "description": "Too many references. Too many references to some kernel object."
+        }
+      ],
+      "10060": [
+        {
+          "message": "WSAETIMEDOUT",
+          "description": "Connection timed out. A connection attempt failed because the connected party did not properly respond after a period of time, or the established connection failed because the connected host has failed to respond."
+        }
+      ],
+      "10061": [
+        {
+          "message": "WSAECONNREFUSED",
+          "description": "Connection refused. No connection could be made because the target computer actively refused it. This usually results from trying to connect to a service that is inactive on the foreign host—that is, one with no server application running."
+        }
+      ],
+      "10062": [
+        {
+          "message": "WSAELOOP",
+          "description": "Cannot translate name. Cannot translate a name."
+        }
+      ],
+      "10063": [
+        {
+          "message": "WSAENAMETOOLONG",
+          "description": "Name too long. A name component or a name was too long."
+        }
+      ],
+      "10064": [
+        {
+          "message": "WSAEHOSTDOWN",
+          "description": "Host is down. A socket operation failed because the destination host is down. A socket operation encountered a dead host. Networking activity on the local host has not been initiated. These conditions are more likely to be indicated by the error WSAETIMEDOUT."
+        }
+      ],
+      "10065": [
+        {
+          "message": "WSAEHOSTUNREACH",
+          "description": "No route to host. A socket operation was attempted to an unreachable host. See WSAENETUNREACH."
+        }
+      ],
+      "10066": [
+        {
+          "message": "WSAENOTEMPTY",
+          "description": "Directory not empty. Cannot remove a directory that is not empty."
+        }
+      ],
+      "10067": [
+        {
+          "message": "WSAEPROCLIM",
+          "description": "Too many processes. A Windows Sockets implementation may have a limit on the number of applications that can use it simultaneously. WSAStartup may fail with this error if the limit has been reached."
+        }
+      ],
+      "10068": [
+        {
+          "message": "WSAEUSERS",
+          "description": "User quota exceeded. Ran out of user quota."
+        }
+      ],
+      "10069": [
+        {
+          "message": "WSAEDQUOT",
+          "description": "Disk quota exceeded. Ran out of disk quota."
+        }
+      ],
+      "10070": [
+        {
+          "message": "WSAESTALE",
+          "description": "Stale file handle reference. The file handle reference is no longer available."
+        }
+      ],
+      "10071": [
+        {
+          "message": "WSAEREMOTE",
+          "description": "Item is remote. The item is not available locally."
+        }
+      ],
+      "10091": [
+        {
+          "message": "WSASYSNOTREADY",
+          "description": "Network subsystem is unavailable. This error is returned by WSAStartup if the Windows Sockets implementation cannot function at this time because the underlying system it uses to provide network services is currently unavailable. Users should check: That the appropriate Windows Sockets DLL file is in the current path. That they are not trying to use more than one Windows Sockets implementation simultaneously. If there is more than one Winsock DLL on your system, be sure the first one in the path is appropriate for the network subsystem currently loaded. The Windows Sockets implementation documentation to be sure all necessary components are currently installed and configured correctly."
+        }
+      ],
+      "10092": [
+        {
+          "message": "WSAVERNOTSUPPORTED",
+          "description": "Winsock.dll version out of range. The current Windows Sockets implementation does not support the Windows Sockets specification version requested by the application. Check that no old Windows Sockets DLL files are being accessed."
+        }
+      ],
+      "10093": [
+        {
+          "message": "WSANOTINITIALISED",
+          "description": "Successful WSAStartup not yet performed. Either the application has not called WSAStartup or WSAStartup failed. The application may be accessing a socket that the current active task does not own (that is, trying to share a socket between tasks), or WSACleanup has been called too many times."
+        }
+      ]
+    },
+    "101": {
+      "10101": [
+        {
+          "message": "WSAEDISCON",
+          "description": "Graceful shutdown in progress. Returned by WSARecv and WSARecvFrom to indicate that the remote party has initiated a graceful shutdown sequence."
+        }
+      ],
+      "10102": [
+        {
+          "message": "WSAENOMORE",
+          "description": "No more results. No more results can be returned by the WSALookupServiceNext function."
+        }
+      ],
+      "10103": [
+        {
+          "message": "WSAECANCELLED",
+          "description": "Call has been canceled. A call to the WSALookupServiceEnd function was made while this call was still processing. The call has been canceled."
+        }
+      ],
+      "10104": [
+        {
+          "message": "WSAEINVALIDPROCTABLE",
+          "description": "Procedure call table is invalid. The service provider procedure call table is invalid. A service provider returned a bogus procedure table to Ws2_32.dll. This is usually caused by one or more of the function pointers being NULL."
+        }
+      ],
+      "10105": [
+        {
+          "message": "WSAEINVALIDPROVIDER",
+          "description": "Service provider is invalid. The requested service provider is invalid. This error is returned by the WSCGetProviderInfo and WSCGetProviderInfo32 functions if the protocol entry specified could not be found. This error is also returned if the service provider returned a version number other than 2.0."
+        }
+      ],
+      "10106": [
+        {
+          "message": "WSAEPROVIDERFAILEDINIT",
+          "description": "Service provider failed to initialize. The requested service provider could not be loaded or initialized. This error is returned if either a service provider's DLL could not be loaded (LoadLibrary failed) or the provider's WSPStartup or NSPStartup function failed."
+        }
+      ],
+      "10107": [
+        {
+          "message": "WSASYSCALLFAILURE",
+          "description": "System call failure. A system call that should never fail has failed. This is a generic error code, returned under various conditions. Returned when a system call that should never fail does fail. For example, if a call to WaitForMultipleEvents fails or one of the registry functions fails trying to manipulate the protocol/namespace catalogs. Returned when a provider does not return SUCCESS and does not provide an extended error code. Can indicate a service provider implementation error."
+        }
+      ],
+      "10108": [
+        {
+          "message": "WSASERVICE_NOT_FOUND",
+          "description": "Service not found. No such service is known. The service cannot be found in the specified name space."
+        }
+      ],
+      "10109": [
+        {
+          "message": "WSATYPE_NOT_FOUND",
+          "description": "Class type not found. The specified class was not found."
+        }
+      ],
+      "10110": [
+        {
+          "message": "WSA_E_NO_MORE",
+          "description": "No more results. No more results can be returned by the WSALookupServiceNext function."
+        }
+      ],
+      "10111": [
+        {
+          "message": "WSA_E_CANCELLED",
+          "description": "Call was canceled. A call to the WSALookupServiceEnd function was made while this call was still processing. The call has been canceled."
+        }
+      ],
+      "10112": [
+        {
+          "message": "WSAEREFUSED",
+          "description": "Database query was refused. A database query failed because it was actively refused."
+        }
+      ]
+    },
+    "110": {
+      "11001": [
+        {
+          "message": "WSAHOST_NOT_FOUND",
+          "description": "Host not found. No such host is known. The name is not an official host name or alias, or it cannot be found in the database(s) being queried. This error may also be returned for protocol and service queries, and means that the specified name could not be found in the relevant database."
+        }
+      ],
+      "11002": [
+        {
+          "message": "WSATRY_AGAIN",
+          "description": "Nonauthoritative host not found. This is usually a temporary error during host name resolution and means that the local server did not receive a response from an authoritative server. A retry at some time later may be successful."
+        }
+      ],
+      "11003": [
+        {
+          "message": "WSANO_RECOVERY",
+          "description": "This is a nonrecoverable error. This indicates that some sort of nonrecoverable error occurred during a database lookup. This may be because the database files (for example, BSD-compatible HOSTS, SERVICES, or PROTOCOLS files) could not be found, or a DNS request was returned by the server with a severe error."
+        }
+      ],
+      "11004": [
+        {
+          "message": "WSANO_DATA",
+          "description": "Valid name, no data record of requested type. The requested name is valid and was found in the database, but it does not have the correct associated data being resolved for. The usual example for this is a host name-to-address translation attempt (using gethostbyname or WSAAsyncGetHostByName) which uses the DNS (Domain Name Server). An MX record is returned but no A record—indicating the host itself exists, but is not directly reachable."
+        }
+      ],
+      "11005": [
+        {
+          "message": "WSA_QOS_RECEIVERS",
+          "description": "QoS receivers. At least one QoS reserve has arrived."
+        }
+      ],
+      "11006": [
+        {
+          "message": "WSA_QOS_SENDERS",
+          "description": "QoS senders. At least one QoS send path has arrived."
+        }
+      ],
+      "11007": [
+        {
+          "message": "WSA_QOS_NO_SENDERS",
+          "description": "No QoS senders. There are no QoS senders."
+        }
+      ],
+      "11008": [
+        {
+          "message": "WSA_QOS_NO_RECEIVERS",
+          "description": "QoS no receivers. There are no QoS receivers."
+        }
+      ],
+      "11009": [
+        {
+          "message": "WSA_QOS_REQUEST_CONFIRMED",
+          "description": "QoS request confirmed. The QoS reserve request has been confirmed."
+        }
+      ],
+      "11010": [
+        {
+          "message": "WSA_QOS_ADMISSION_FAILURE",
+          "description": "QoS admission error. A QoS error occurred due to lack of resources."
+        }
+      ],
+      "11011": [
+        {
+          "message": "WSA_QOS_POLICY_FAILURE",
+          "description": "QoS policy failure. The QoS request was rejected because the policy system couldn't allocate the requested resource within the existing policy."
+        }
+      ],
+      "11012": [
+        {
+          "message": "WSA_QOS_BAD_STYLE",
+          "description": "QoS bad style. An unknown or conflicting QoS style was encountered."
+        }
+      ],
+      "11013": [
+        {
+          "message": "WSA_QOS_BAD_OBJECT",
+          "description": "QoS bad object. A problem was encountered with some part of the filterspec or the provider-specific buffer in general."
+        }
+      ],
+      "11014": [
+        {
+          "message": "WSA_QOS_TRAFFIC_CTRL_ERROR",
+          "description": "QoS traffic control error. An error with the underlying traffic control (TC) API as the generic QoS request was converted for local enforcement by the TC API. This could be due to an out of memory error or to an internal QoS provider error."
+        }
+      ],
+      "11015": [
+        {
+          "message": "WSA_QOS_GENERIC_ERROR",
+          "description": "QoS generic error. A general QoS error."
+        }
+      ],
+      "11016": [
+        {
+          "message": "WSA_QOS_ESERVICETYPE",
+          "description": "QoS service type error. An invalid or unrecognized service type was found in the QoS flowspec."
+        }
+      ],
+      "11017": [
+        {
+          "message": "WSA_QOS_EFLOWSPEC",
+          "description": "QoS flowspec error. An invalid or inconsistent flowspec was found in the QOS structure."
+        }
+      ],
+      "11018": [
+        {
+          "message": "WSA_QOS_EPROVSPECBUF",
+          "description": "Invalid QoS provider buffer. An invalid QoS provider-specific buffer."
+        }
+      ],
+      "11019": [
+        {
+          "message": "WSA_QOS_EFILTERSTYLE",
+          "description": "Invalid QoS filter style. An invalid QoS filter style was used."
+        }
+      ],
+      "11020": [
+        {
+          "message": "WSA_QOS_EFILTERTYPE",
+          "description": "Invalid QoS filter type. An invalid QoS filter type was used."
+        }
+      ],
+      "11021": [
+        {
+          "message": "WSA_QOS_EFILTERCOUNT",
+          "description": "Incorrect QoS filter count. An incorrect number of QoS FILTERSPECs were specified in the FLOWDESCRIPTOR."
+        }
+      ],
+      "11022": [
+        {
+          "message": "WSA_QOS_EOBJLENGTH",
+          "description": "Invalid QoS object length. An object with an invalid ObjectLength field was specified in the QoS provider-specific buffer."
+        }
+      ],
+      "11023": [
+        {
+          "message": "WSA_QOS_EFLOWCOUNT",
+          "description": "Incorrect QoS flow count. An incorrect number of flow descriptors was specified in the QoS structure."
+        }
+      ],
+      "11024": [
+        {
+          "message": "WSA_QOS_EUNKOWNPSOBJ",
+          "description": "Unrecognized QoS object. An unrecognized object was found in the QoS provider-specific buffer."
+        }
+      ],
+      "11025": [
+        {
+          "message": "WSA_QOS_EPOLICYOBJ",
+          "description": "Invalid QoS policy object. An invalid policy object was found in the QoS provider-specific buffer."
+        }
+      ],
+      "11026": [
+        {
+          "message": "WSA_QOS_EFLOWDESC",
+          "description": "Invalid QoS flow descriptor. An invalid QoS flow descriptor was found in the flow descriptor list."
+        }
+      ],
+      "11027": [
+        {
+          "message": "WSA_QOS_EPSFLOWSPEC",
+          "description": "Invalid QoS provider-specific flowspec. An invalid or inconsistent flowspec was found in the QoS provider-specific buffer."
+        }
+      ],
+      "11028": [
+        {
+          "message": "WSA_QOS_EPSFILTERSPEC",
+          "description": "Invalid QoS provider-specific filterspec. An invalid FILTERSPEC was found in the QoS provider-specific buffer."
+        }
+      ],
+      "11029": [
+        {
+          "message": "WSA_QOS_ESDMODEOBJ",
+          "description": "Invalid QoS shape discard mode object. An invalid shape discard mode object was found in the QoS provider-specific buffer."
+        }
+      ],
+      "11030": [
+        {
+          "message": "WSA_QOS_ESHAPERATEOBJ",
+          "description": "Invalid QoS shaping rate object. An invalid shaping rate object was found in the QoS provider-specific buffer."
+        }
+      ],
+      "11031": [
+        {
+          "message": "WSA_QOS_RESERVED_PETYPE",
+          "description": "Reserved policy QoS element type. A reserved policy element was found in the QoS provider-specific buffer.WSA_INVALID_HANDLE 6 Specified event object handle is invalid. An application attempts to use an event object, but the specified handle is not valid."
+        }
+      ]
+    }
+  }
+}
